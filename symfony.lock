@@ -1,4 +1,7 @@
 {
+    "monolog/monolog": {
+        "version": "1.24.0"
+    },
     "psr/cache": {
         "version": "1.0.1"
     },
@@ -88,6 +91,23 @@
     "symfony/http-kernel": {
         "version": "v3.4.27"
     },
+    "symfony/monolog-bridge": {
+        "version": "v3.4.27"
+    },
+    "symfony/monolog-bundle": {
+        "version": "3.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.1",
+            "ref": "18ebf5a940573a20de06f9c4060101eeb438cf3d"
+        },
+        "files": [
+            "./config/packages/dev/monolog.yaml",
+            "./config/packages/prod/monolog.yaml",
+            "./config/packages/test/monolog.yaml"
+        ]
+    },
     "symfony/polyfill-apcu": {
         "version": "v1.11.0"
     },
@@ -109,7 +129,27 @@
             "./config/routes.yaml"
         ]
     },
+    "symfony/twig-bridge": {
+        "version": "v3.4.27"
+    },
+    "symfony/twig-bundle": {
+        "version": "3.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.3",
+            "ref": "369b5b29dc52b2c190002825ae7ec24ab6f962dd"
+        },
+        "files": [
+            "./config/packages/twig.yaml",
+            "./config/routes/dev/twig.yaml",
+            "./templates/base.html.twig"
+        ]
+    },
     "symfony/yaml": {
         "version": "v3.4.27"
+    },
+    "twig/twig": {
+        "version": "v2.9.0"
     }
 }
