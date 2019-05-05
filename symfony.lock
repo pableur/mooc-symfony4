@@ -96,6 +96,9 @@
     "psr/simple-cache": {
         "version": "1.0.1"
     },
+    "sensio/generator-bundle": {
+        "version": "v3.1.7"
+    },
     "symfony/cache": {
         "version": "v3.4.27"
     },
