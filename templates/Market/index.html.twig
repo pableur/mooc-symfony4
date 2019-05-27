@@ -1,17 +1,137 @@
-
 <!DOCTYPE html>
-	<html>
-		<head>
-		  <title>Bienvenue sur ma première page avec OpenClassrooms !</title>
-		  <meta charset="UTF-8">
-		</head>
-		<body>
-		  <h1>Hello World !</h1>
-		  <p>
-			Le Hello World est un grand classique en programmation.
-			Il signifie énormément, car cela veut dire que vous avez
-			réussi à exécuter le programme pour accomplir une tâche simple :
-			afficher ce hello world !
-		  </p>
-	</body>
-</html>
+
+<html class="no-js js" lang="fr"><!--<![endif]-->
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<title>Petites annonces gratuites d'occasion sécurisées - RPcorpo</title>
+	<meta name="description" content=" Petites annonces Gratuites Sécurisées. Découvrez nos annonces premium de produits neufs et d'occasion en France : Immo, Auto, High-tech etc…">
+	
+
+	<link rel="stylesheet" href="mooc-symfony4/public/css/64e095a-59a036e.css">	
+	<link rel="stylesheet" href="mooc-symfony4/public/css/style.css">
+	<link rel="stylesheet" href="mooc-symfony4/public/css/font-awesome.css">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!--[if lt IE 9]> <p class="oldbrowser-warning">Vous utilisez un navigateur <strong>dépassé</strong>. Veuillez le <a href="{{deadLink}}">activez Google Chrome Frame</a> afin d'améliorer votre expérience de navigation.</p> <![endif]-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-1">
+			<img src="/mooc-symfony4/public/img/logo.png" alt="Petites annonces gratuites, RPcorpo"  width="200" >
+		</div>
+		<div class="col-lg-8">
+
+		</div>
+		<div class="col-lg-3">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="{{deadLink}}">Se connecter</a></li>
+				<li><a href="{{deadLink}}">S'inscrire</a></li>
+			</ul>
+			<span class="top-discover">	Découvrir	</span>			
+		</div>
+		<div class="col-lg-12">
+			<h1 >Achetez, vendez en toute sérénité	</h1>
+			<h2 >Offrez-vous des produits d'occasion sans sortir de chez vous et de manière sécurisée.</h2>
+		</div>
+	</div>
+
+	<div class="">	
+		<div class="col-lg-12">
+			{{ include('Market/carousel.html.twig', { 'listShop': listShop }) }}
+		</div>
+				
+		<div class="row ligne-grise">
+			<div >
+				<a class="col-lg-4" href="{{deadLink}}">Passer une annonce gratuite</a>
+				<a class="col-lg-4" href="{{deadLink}}">Consulter nos annonces</a>
+				<i class="col-lg-4" class="fa fa-pencil-square-o"></i> 191 969 annonces
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="homepage">
+			<div class="categories row">
+			<h2 class="title-main bot">Nos boutiques</h2>
+			 {% for shop in listShop %}
+				<div class="col-xl-3 col-md-4 col-sm-6 categories_item">
+					<div class="categories_content category-vehicules-occasion text-center">
+						<div class="categories_item_header" style="background-image:url('{{shop.pictureSpotlight.path}}');">
+							<div class="overlay">
+								<div class="header">
+									<a class="cat-link" href="{{shop.url}}">{{shop.title}}</a>
+								</div>
+								<div class="counter number category-vehicules-occasion" style ="background-color: rgba(255, 217, 170, 0.5)">
+									<p>{{shop.description}}</p>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	{{ include('Market/concept.html.twig') }}
+
+	<div class="container">
+	{{ include('Market/vignette_categorie.html.twig', { 'listCategory': listCategory }) }}
+	</div>
+
+	<div class="box-kck-presentation">
+		<div class="container">
+			<h2 class="h4">Vous recherchez un bien ou un service ? Vous souhaitez vendre un bien ou proposer vos services ?</h2>
+			<p>
+			Que vous soyez particulier ou professionnel, RPcorpo est plus qu'un site d'annonces. <a href="{{deadLink}}">Passer une annonce gratuite</a>
+			 sur RPcorpo vous permet d'être garanti de recevoir votre paiement si vous faites une transaction avec un acheteur. Grâce à notre système de paiement et livraison sécurisé, le vendeur peut effectuer sa vente en
+			 toute sérénité qu'il s'agisse d'un article à livrer ou d'une remise en main propre. Le vendeur reçoit la garantie d'être payer.</p>
+			<p>
+			En tant qu'acheteur de produit d'occasion ou neuf, notre système de paiement et livraison sécurisés vous permet d'avoir l'assurance de 
+			recevoir votre colis. En effet, lors de l'achat d'un produit sur RPcorpo, votre argent n'est pas envoyé au vendeur tant que vous ne 
+			confirmez pas la réception du colis.
+			</p>
+			<p>
+			Démarquez votre annonce avec votre présentation et la description de votre profil et de vos annonces. Plus vous avez d'activité sur RPcorpo, plus votre score d'expérience augmente.
+			</p>
+			<p>
+			Les échanges entre utilisateurs sont sécurisés grâce à une messagerie interne. Votre email n'est jamais communiqué à votre destinataire et 
+			toutes les informations vous concernant restent confidentielles.
+			</p>
+			<p>
+			Consultez les milliers d'annonces en ligne, déposez autant d'annonces que vous le souhaitez, géolocalisez les annonces et devenez tout simplement vendeur, acheteur, ou bien même les deux, sans dépenser ne serait-ce qu'un centime !
+			</p>
+		</div>
+	</div>
+</div>
+
+{{ include("Market/footer.html.twig") }}
+
+<script>
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = '//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css';
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      if (typeof requestAnimationFrame != 'undefined') {
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      }
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
+
+
+<div style="background: rgba(240, 240, 240, 0.5) none repeat scroll 0% 0%; border-top: 1px solid grey; position: fixed; left: 0px; width: 100%; height: auto; z-index: 346; opacity: 0; bottom: 0px; display: none;"><a style="position: absolute; top: -13px; width: 27px; height: 27px;" href="#"><img alt="close" src="index_fichiers/button_close.png" style="border: none"></a><div id="placeholderId_1" style="padding-top: 4px; text-align: center; width: 100%; margin: 0px;"><iframe id="cto_iframe_placeholderId_1" allowtransparency="true" hspace="0" marginwidth="0" marginheight="0" scrolling="no" vspace="0" width="728px" height="90px" frameborder="0"></iframe></div><script type="text/javascript" class="cto_async">var zoneid_desktop="499625",zoneid_mobile="499626",zoneid_selected=zoneid_desktop;(window.innerWidth<700||window.innerHeight<200)&&(zoneid_selected=zoneid_mobile);var crt_curl="http://r.criteo.com/?";!function(e,t,r,o,n,c){var MAX_ct0 = "";var a=t.getElementsByClassName("cto_async"),i=a.length,o=o+"_"+i,s=t.createElement("div");s.id=o,s.style.paddingTop = "4px",s.style.textAlign = "center",s.style.width = "100%",s.style.margin="0px";var d=t.getElementsByTagName(r),l=a[i-1];l.parentNode.insertBefore(s,l);var p=d[0],m=t.createElement(r),h="&loc="+encodeURIComponent(e.location),f=t.referrer?"&referer="+encodeURIComponent(t.referrer):"",g="http"==c.substring(0,4)?"&ct0="+encodeURIComponent(c):"",u="&cb="+Math.floor(99999999999*Math.random());var y = "";if(typeof MAX_ct0!="undefined"&&MAX_ct0.substring(0,4)=="http"){y="&ct0="+escape(MAX_ct0)};var adserverCode = "";adserverCode = "&publisherurl=" + escape(e.location.hostname);m.async="true",m.src=(("https:"==location.protocol?"https:":"http:")+"//cas.criteo.com/delivery/ajs.php?zoneid="+n+"&containerid="+o+g+h+f+u+y+adserverCode).substring(0,2e3),p.parentNode.insertBefore(m,p);}(window,document,"script","placeholderId",zoneid_selected,crt_curl);</script></div><ins class="adsbygoogle adsbygoogle-noablate" style="display: none !important;" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:0px;height:0px;" frameborder="0"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_2102091035352" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body><iframe id="google_esf" name="google_esf" src="index_fichiers/zrt_lookup.html" style="display: none;" data-ad-client="ca-pub-9098696956141718"></iframe></html>

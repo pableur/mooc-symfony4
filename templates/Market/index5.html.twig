@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="no-js js" lang="fr"><!--<![endif]-->
+	<head>
+		<title>Petites annonces gratuites d'occasion sécurisées - RPcorpo</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">	
+		<meta name="description" content=" Petites annonces Gratuites Sécurisées. Découvrez nos annonces premium de produits neufs et d'occasion en France : Immo, Auto, High-tech etc…">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="mooc-symfony4/public/css/font-awesome.css">
+		<link rel="stylesheet" href="mooc-symfony4/public/css/style.css">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+		<!-- Custom fonts for this template -->
+		<link href="mooc-symfony4/css/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<!--[if lt IE 9]> <p class="oldbrowser-warning">Vous utilisez un navigateur <strong>dépassé</strong>. Veuillez le <a href=" ">activez Google Chrome Frame</a> afin d'améliorer votre expérience de navigation.</p> <![endif]-->
+
+		<div>
+			<div  class="container">
+				<header  class="row">
+					<div class="col-lg-12">
+						<h1 class="home-main-title">Achetez, vendez en toute sérénité	</h1>
+						<h2 class="home-main-subtitle">Offrez-vous des produits d'occasion sans sortir de chez vous et de manière sécurisée.</h2>
+					</div>
+				
+					<div class="col-lg-12">
+						<div class=" top-head">
+							<div class="container collapse navbar-collapse" id="menu-collapse">
+								<span class="top-img">
+									<img src="" alt="Petites annonces gratuites, RPcorpo" style="width: 125px;">
+								</span>
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href=" ">Se connecter</a></li>
+									<li><a href=" ">S'inscrire</a></li>
+								</ul>
+								<span class="top-discover">	Découvrir	</span>		
+							</div>
+						</div>	
+					</div>
+					
+					<div class="col-lg-12">
+						{{ include('Market/carousel.html.twig', { 'listShop': listShop }) }}
+					</div>
+					
+					
+					<div class="">
+						<div>
+							<a href=" ">Passer une annonce gratuite</a>
+							<a href=" ">Consulter nos annonces</a>
+						</div>
+						<div>
+							<i class="fa fa-pencil-square-o"></i> 191 969 annonces
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<div class="container">
+				<div class="homepage">
+					<div class="categories row">
+					<h2 class="title-main bot">Nos boutiques</h2>
+					 {% for shop in listShop %}
+						<div class="col-xl-3 col-md-4 col-sm-6 categories_item">
+							<div class="categories_content category-vehicules-occasion text-center">
+								<div class="categories_item_header" style="background-image:url('{{shop.pictureSpotlight.path}}');">
+									<div class="overlay">
+										<div class="header">
+											<a class="cat-link" href="">{{shop.title}}</a>
+										</div>
+										<div >
+											<p>{{shop.description}}</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+					</div>
+				</div>
+			</div>
+
+			{{ include("Market/concept.html.twig") }}
+
+			<div class="container">
+				<div class="homepage">
+					<div class="categories row">
+						<h2 class="title-main bot">Les catégories des petites annonces</h2>
+						{{ include('Market/vignette_categorie.html.twig', { 'listCategory': listCategory }) }}
+					</div>
+				</div>
+			</div>
+
+			<div class="box-kck-presentation">
+				<div class="container">
+					<h2 class="h4">Vous recherchez un bien ou un service ? Vous souhaitez vendre un bien ou proposer vos services ?</h2>
+					<p>Que vous soyez particulier ou professionnel, RPcorpo est plus qu'un site d'annonces. <a href=" ">Passer une annonce gratuite</a>
+					 sur RPcorpo vous permet d'être garanti de recevoir votre paiement si vous faites une transaction avec un acheteur. Grâce à notre système de paiement et livraison sécurisé, le vendeur peut effectuer sa vente en
+					 toute sérénité qu'il s'agisse d'un article à livrer ou d'une remise en main propre. Le vendeur reçoit la garantie d'être payer.</p>
+					<p>En tant qu'acheteur de produit d'occasion ou neuf, notre système de paiement et livraison sécurisés vous permet d'avoir l'assurance de 
+					recevoir votre colis. En effet, lors de l'achat d'un produit sur RPcorpo, votre argent n'est pas envoyé au vendeur tant que vous ne 
+					confirmez pas la réception du colis.</p>
+					<p>	Démarquez votre annonce avec votre présentation et la description de votre profil et de vos annonces.
+					Plus vous avez d'activité sur RPcorpo, plus votre score d'expérience augmente.</p>
+					<p>Les échanges entre utilisateurs sont sécurisés grâce à une messagerie interne. Votre email n'est jamais communiqué à votre destinataire et 
+					toutes les informations vous concernant restent confidentielles.</p>
+					<p>Consultez les milliers d'annonces en ligne, déposez autant d'annonces que vous le souhaitez, 
+					géolocalisez les annonces et devenez tout simplement vendeur, acheteur, ou bien même les deux, sans dépenser ne serait-ce qu'un centime !</p>
+				</div>
+			</div>
+		</div>
+
+		{{ include("Market/footer.html.twig") }}
+		
+		<!-- Bootstrap core JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script
+
+		<!-- Plugin JavaScript -->
+		<script src="mooc-symfony4/public/js/jquery-easing/jquery.easing.min.js"></script>
+
+		<!-- Custom scripts for this template -->
+		<script src="mooc-symfony4/public/js/agency.min.js"></script>
+
+	</body>
+</html>

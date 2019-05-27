@@ -8,6 +8,31 @@
 app_market_home_page:
     path: /
     defaults: { _controller: 'App\Controller\HomePage::home' }
+    
+app_market_item_page:
+    path: item/{page}/
+    defaults:  { _controller:App\Controller\Item::item}
+    requirements:
+        page: '\d+'
+        
+app_market_shop_page:
+    path: shop/{page}/
+    defaults:  { _controller:App\Controller\Shop::shopView}
+    requirements:
+        page: '\d+'
+        
+app_market_comingsoon:
+    path: comingsoon/
+    controller: App\Controller\DefaultView::comingsoon
+
+app_market_registerPromo:
+    path: registerPromo/
+    controller: App\Controller\Register::registerPromo
+    
+app_market_register_acknowledgement:
+    path: registerAcknowledgement/
+    controller: App\Controller\Register::acknowledgement
+    methods:  GET | POST
 
 # the "app_lucky_number" route name is not important yet
 app_lucky_number:

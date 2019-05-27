@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html class="no-js js" lang="fr"><!--<![endif]-->
+
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<title>Petites annonces gratuites d'occasion sécurisées - RPcorpo</title>
+	<meta name="description" content=" Petites annonces Gratuites Sécurisées. Découvrez nos annonces premium de produits neufs et d'occasion en France : Immo, Auto, High-tech etc…">
+	
+
+	<link rel="stylesheet" href="/mooc-symfony4/public/css/64e095a-59a036e.css">	
+	<link rel="stylesheet" href="/mooc-symfony4/public/css/style.css">
+	<link rel="stylesheet" href="/mooc-symfony4/public/css/font-awesome.css">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:#f5f5f5;">
+
+<!--[if lt IE 9]> <p class="oldbrowser-warning">Vous utilisez un navigateur <strong>dépassé</strong>. Veuillez le <a href=" ">activez Google Chrome Frame</a> afin d'améliorer votre expérience de navigation.</p> <![endif]-->
+	<div class="categories_item_header" style="background-image:url('/{{shop.pictureSpotlight.path}}');">
+		<div class="overlay">
+			<div class="header">
+				<a class="cat-link" href="{{shop.url}}">{{shop.title}}</a>
+			</div>
+			<div >
+				<p>{{shop.description}}</p>
+			</div>
+		</div>
+	</div>
+	
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8">
+			<img alt="Bootstrap Image Preview" src="{{item.picture.path}}" />
+		</div>
+		<div class="col-md-4">
+			<h3> {{item.title}} </h3>
+			<p>
+				{{item.description}}
+			</p>
+			<h3> {{item.price}}€ </h3>
+		</div>
+	</div>
+</div>
+
+	 {% for item in listItem %}
+	<div class="col-xl-3 col-md-4 col-sm-6 categories_item">
+		<div class="categories_content category-vehicules-occasion text-center">
+			<div class="categories_item_header" style="background-image:url('{{item.picture.path}}');">
+				<div class="overlay">
+					<div class="header">
+						<a class="cat-link" href="{{item.url}}">{{item.title}}</a>
+					</div>
+					<div class="counter number category-vehicules-occasion">{{item.price}}€</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}
+
+{{ include("Market/footer.html.twig") }}
+</body>
+
+</html>

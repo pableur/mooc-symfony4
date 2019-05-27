@@ -1,0 +1,8 @@
+adc_market:
+    resource: "@ADCMarketBundle/Resources/config/routing.yml"
+    prefix:   /
+
+adc_item:
+    resource: "@ADCItemBundle/Resources/config/routing.yml"
+    prefix:   /
+

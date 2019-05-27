@@ -1,0 +1,14 @@
+ {% for category in listCategory %}
+	<div class="col-xl-3 col-md-4 col-sm-6 categories_item">
+		<div class="categories_content category-vehicules-occasion text-center">
+			<div class="categories_item_header" style="background-image:url('{{category.picture.path}}');">
+				<div class="overlay">
+				<div class="header">
+					<a class="cat-link" href="{{deadLink}}">{{category.name}}</a>
+				</div>
+				<div class="counter number category-vehicules-occasion"> 5 879 annonces </div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}
